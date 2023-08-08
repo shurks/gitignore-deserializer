@@ -1,0 +1,31 @@
+{
+	"name": "@hurx/gitignore-deserializer",
+	"displayName": "Gitignore deserializer",
+	"description": "Check if a path is ignored by git or not by finding the closest .gitignore file in its directory or in its parent directories.",
+	"version": "1.0.1",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"dependencies": {
+		"rimraf": "^5.0.0",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.4"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.11"
+	},
+	"scripts": {
+		"compile": "tsc",
+		"clean": "rimraf --glob ./dist",
+		"prepackage": "npm run clean && npm run compile && ts-node ./src/prepackage --execute-prepackage",
+		"package": "cd ./dist && npm publish --access public"
+	},
+	"keywords": [
+		"gitignore",
+		"deserializer",
+		"gitignore deserializer",
+		"gitignore parser",
+		"parser"
+	],
+	"author": "Stan Hurks",
+	"license": "MIT"
+}
