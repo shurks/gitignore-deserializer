@@ -12,7 +12,7 @@
 		"typescript": "^5.0.4"
 	},
 	"devDependencies": {
-		"@types/node": "^18.15.11"
+		"@types/node": "^18.17.4"
 	},
 	"scripts": {
 		"compile": "tsc",
